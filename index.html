@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" href="img/nd.png" type="image/x-icon" />
+		<title>Number Guessing Game</title>
+
+		<!-- bootstrap links -->
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"
+		/>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- google links -->
+
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+
+		<!-- my links -->
+
+		<link rel="stylesheet" href="style/style.css" />
+		<script defer src="script/script.js"></script>
+	</head>
+	<body>
+		<!-- HEAD -->
+
+		<header class="text-center text-black mt-4">
+			<h1 class="text-uppercase fw-bold">number guessing game</h1>
+			<div>
+				<div id="istruzioni" class="mx-auto">
+					<span class="material-symbols-outlined nascosto" id="arrow">
+						expand_less
+					</span>
+					<h2 class="d-inline-block" id="istruzioni">Istruzioni</h2>
+				</div>
+				<p
+					id="testoIstruzioni"
+					class="nascosto container border border-3 border-dark"
+				>
+					Il computer genera un numero casuale compreso tra 0 e 100.
+					Tu dovrai indovinarlo. Hai a disposizione 7 tentativi
+				</p>
+			</div>
+		</header>
+
+		<!-- MAIN -->
+
+		<main class="text-center p-2 pt-0">
+			<!-- RESTART BUTTON -->
+
+			<section class="p-3">
+				<button
+					id="reButton"
+					class="btn btn-outline-warning text-black"
+					type="button"
+				>
+					ReComincia
+				</button>
+			</section>
+
+			<!-- CHECK SECTION -->
+
+			<section class="p-3 d-flex justify-content-center gap-3">
+				<input
+					id="numberInput"
+					class="ps-3 pe-2 w-25"
+					type="number"
+					placeholder="numero"
+					value="7"
+					min="1"
+				/>
+				<button id="checkButton" class="btn btn-warning" type="button">
+					controlla
+				</button>
+			</section>
+
+			<!-- MAIN GAME -->
+
+			<section
+				id="gameBoard"
+				class="d-flex flex-column justify-content-center"
+			>
+				<div id="gameStatusIcon">
+					<span class="material-symbols-outlined">
+						not_listed_location
+					</span>
+				</div>
+				<p id="gameStatusText">errore</p>
+			</section>
+
+			<!-- HELPS -->
+
+			<section
+				class="mx-auto pb-3 row row-cols-sm-3 justify-content-center text-black"
+			>
+				<div class="mt-3 mt-sm-0">
+					<h2 class="fs-5">Tentativi rimasti</h2>
+					<span class="material-symbols-outlined"> flag </span>
+					<p id="attempts" class="m-0 text-warning">
+						...c'è qualcosa che non va...
+					</p>
+				</div>
+				<div class="mt-5 mt-sm-0">
+					<h2 class="fs-5">Suggerimenti</h2>
+					<span class="material-symbols-outlined">
+						compare_arrows
+					</span>
+					<p id="hints" class="m-0 text-warning">
+						hmm...fammi cercare il problema
+					</p>
+				</div>
+				<div class="mt-5 mt-sm-0">
+					<h2 class="fs-5">Numeri inseriti</h2>
+					<span class="material-symbols-outlined"> publish </span>
+					<p id="numbers" class="m-0 text-warning">
+						...forse il script non è stato caricato
+					</p>
+				</div>
+			</section>
+		</main>
+		<footer
+			class="text-center text-warning py-3 d-flex flex-column justify-content-center flex-md-row gap-md-4"
+		>
+			<p>Dev: SWARAN SINGH</p>
+			<p>
+				<a
+					href="https://github.com/ADCByDefault"
+					class="link-warning"
+					rel="noopener"
+					target="_blank"
+					>GITHUB</a
+				>
+			</p>
+		</footer>
+	</body>
+</html>

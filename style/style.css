@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Silkscreen", cursive;
+  background: rgb(0, 252, 255);
+  background: linear-gradient(90deg, rgba(0, 252, 255, 1) 0%, rgba(255, 0, 146, 1) 57%, rgba(255, 0, 196, 1) 100%);
+}
+
+#istruzioni {
+  width: fit-content;
+}
+
+#istruzioni:hover {
+  cursor: pointer;
+}
+
+header p {
+  transition-property: transform, max-height, opacity;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+}
+
+p.nascosto {
+  transform: scale(0);
+  opacity: 0;
+  max-height: 0;
+}
+
+p.visibile {
+  transform: scale(1);
+  opacity: 1;
+  max-height: 200px;
+}
+
+span {
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+span.nascosto {
+  transform: rotate(0);
+}
+
+span.visibile {
+  transform: rotate(180deg);
+}
+
+#gameBoard {
+  height: 250px;
+  color: #ffc107;
+}
+
+#gameBoard.win {
+  color: chartreuse;
+}
+
+#gameBoard.lose {
+  color: firebrick;
+}
+
+#gameStatusIcon span {
+  font-size: 120px;
+}
+
+#gameBoard.win #gameStatusIcon {
+  font-size: 104px;
+}
+
+#gameBoard.lose #gameStatusIcon {
+  font-size: 104px;
+}
+
+#gameStatusText {
+  font-size: 24px;
+}
+
+/* Target blank icon */
+a[target="_blank"]:after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0 3px 0 5px;
+}
